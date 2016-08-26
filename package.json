@@ -1,14 +1,14 @@
 {
     "name": "d3-let",
     "title": "d3-let",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": {
         "name": "quantmind.com",
         "email": "message@quantmind.com"
     },
     "keywords": [],
     "license": "BSD-3-Clause",
-    "description": "",
+    "description": "A small set of utilities for d3 plugins",
     "repository": {
         "type": "git",
         "url": ""
