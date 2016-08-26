@@ -7,5 +7,5 @@ Utilities for every day use. No dependencies, import what you need, if you need 
 
 ## Installing
 
-If you use NPM, ``npm install d3-let``. Otherwise, download the latest release.
+If you use [NPM](https://www.npmjs.com/package/d3-let), ``npm install d3-let``. Otherwise, download the latest release.
 AMD, CommonJS, and vanilla environments are supported. In vanilla, a ``d3`` global is exported.
