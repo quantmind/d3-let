@@ -1,6 +1,6 @@
 {
-    "name": "d3-utils",
-    "title": "d3-utils",
+    "name": "d3-let",
+    "title": "d3-let",
     "version": "0.1.0",
     "author": {
         "name": "quantmind.com",
@@ -19,7 +19,7 @@
     "directories": {
         "lib": "src"
     },
-    "main": "dist/d3-utils.js",
+    "main": "dist/d3-let.js",
     "jsnext:main": "index",
     "devDependencies": {
         "babelify": "7",

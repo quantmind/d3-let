@@ -12,5 +12,5 @@ export default {
             presets: ['es2015-rollup']
         })
     ],
-    dest: 'dist/d3-utils.js'
+    dest: 'dist/d3-let.js'
 };
