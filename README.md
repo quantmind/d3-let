@@ -4,3 +4,8 @@
 [![devDependency Status](https://david-dm.org/quantmind/d3-let/dev-status.svg)](https://david-dm.org/quantmind/d3-let#info=devDependencies)
 
 Utilities for every day use. No dependencies, import what you need, if you need it.
+
+## Installing
+
+If you use NPM, ``npm install d3-let``. Otherwise, download the latest release.
+AMD, CommonJS, and vanilla environments are supported. In vanilla, a ``d3`` global is exported.
