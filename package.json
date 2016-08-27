@@ -1,19 +1,17 @@
 {
     "name": "d3-let",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "description": "A small set of utilities for d3 plugins",
+    "homepage": "https://github.com/quantmind/d3-let",
     "author": {
-        "name": "quantmind.com",
-        "email": "message@quantmind.com"
+        "name": "Luca Sbardella",
+        "url": "http://lucasbardella.com"
     },
     "keywords": [],
     "license": "BSD-3-Clause",
     "repository": {
         "type": "git",
-        "url": ""
-    },
-    "engines": {
-        "node": ">= 6.0"
+        "url": "https://github.com/quantmind/d3-let.git"
     },
     "main": "dist/d3-let.js",
     "module": "index",
@@ -27,6 +25,7 @@
         "crossfilter": "1",
         "eslint": "3.4",
         "faucet": "0.0",
+        "package-preamble": "0.0",
         "rollup": "0.34",
         "rollup-plugin-babel": "2",
         "rollup-plugin-json": "2",
@@ -34,10 +33,10 @@
         "uglify-js": "2.7"
     },
     "scripts": {
-        "pretest": "rm -rf dist && mkdir dist && rollup -c",
+        "pretest": "rm -rf dist && mkdir dist && rollup -c --banner \"$(preamble)\"",
         "test": "eslint index.js src test && babel-tape-runner `find test -name '*-test.js'` | faucet",
-        "prepublish": "npm run test && uglifyjs dist/d3-let.js -c -m -o dist/d3-let.min.js && rm -f dist/d3-let.zip && zip -j dist/d3-let.zip -- LICENSE README.md dist/d3-let.js dist/d3-let.min.js",
-        "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git tag -am \"Release $VERSION.\" v${VERSION} && git push --tags"
+        "prepublish": "npm run test && uglifyjs --preamble \"$(preamble)\" dist/d3-let.js -c -m -o dist/d3-let.min.js && rm -f dist/d3-let.zip",
+        "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git tag -am \"Release $VERSION.\" v${VERSION} && git push --tags && zip -j dist/d3-let.zip -- LICENSE README.md dist/d3-let.js dist/d3-let.min.js"
     },
     "babel": {
         "presets": ["es2015"]
