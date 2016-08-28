@@ -1,2 +1,4 @@
+.idea
+.travis.yml
 dist/*.zip
 test/

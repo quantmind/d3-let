@@ -33,3 +33,12 @@ test('test extend', (t) => {
     t.deepEqual(d3.extend({}, {bla:'foo'}, undefined), {bla: 'foo'});
     t.end();
 });
+
+
+test('test self', (t) => {
+    var o = {}, inner = {};
+    t.equal(d3.self.get(o), undefined);
+    d3.self.set(o, inner);
+    t.equal(d3.self.get(o), inner);
+    t.end();
+});
