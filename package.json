@@ -1,6 +1,6 @@
 {
     "name": "d3-let",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "A small set of utilities for d3 plugins",
     "homepage": "https://github.com/quantmind/d3-let",
     "author": {

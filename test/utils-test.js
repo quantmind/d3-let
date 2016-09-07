@@ -42,3 +42,23 @@ test('test self', (t) => {
     t.equal(d3.self.get(o), inner);
     t.end();
 });
+
+
+test('test pop', (t) => {
+    t.equal(d3.pop(), undefined);
+    t.equal(d3.pop({}), undefined);
+    var o = {a:1, b:2, c:3};
+    t.equal(d3.pop(o, 'x'), undefined);
+    t.equal(d3.pop(o, 'b'), 2);
+    t.equal(d3.pop(o, 'b'), undefined);
+    //
+    t.equal(d3.pop([]), undefined);
+    o = [1,2,3];
+    o.bla = 'foo';
+    t.equal(d3.pop(o, 1), 2);
+    t.equal(d3.pop(o, 1), 3);
+    t.equal(d3.pop(o, 'x'), undefined);
+    t.equal(d3.pop(o, 'bla'), 'foo');
+    t.equal(o.length, 1);
+    t.end();
+});
