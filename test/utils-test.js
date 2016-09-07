@@ -26,11 +26,10 @@ test('test isDate', (t) => {
     t.end();
 });
 
-test('test extend', (t) => {
-    t.equal(d3.extend(), undefined);
-    t.notEqual(d3.extend({}, undefined), {});
-    t.deepEqual(d3.extend({}, undefined), {});
-    t.deepEqual(d3.extend({}, {bla:'foo'}, undefined), {bla: 'foo'});
+test('test assign', (t) => {
+    t.notEqual(d3.assign({}, undefined), {});
+    t.deepEqual(d3.assign({}, undefined), {});
+    t.deepEqual(d3.assign({}, {bla:'foo'}, undefined), {bla: 'foo'});
     t.end();
 });
 
