@@ -26,6 +26,12 @@ test('test isDate', (t) => {
     t.end();
 });
 
+test('test isPromise', (t) => {
+    t.ok(d3.isPromise(new Promise(()=>{})));
+    t.notOk(d3.isPromise({}));
+    t.end();
+});
+
 test('test assign', (t) => {
     t.notEqual(d3.assign({}, undefined), {});
     t.deepEqual(d3.assign({}, undefined), {});

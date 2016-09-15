@@ -29,3 +29,8 @@ export function isDate (value) {
 export function isNumber (value) {
     return ostring.call(value) === '[object Number]';
 }
+
+
+export function isPromise (value) {
+    return ostring.call(value) === '[object Promise]';
+}
