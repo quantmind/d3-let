@@ -25,7 +25,7 @@
         "eslint": "3.5",
         "faucet": "0.0",
         "package-preamble": "0.0",
-        "rollup": "0.34",
+        "rollup": "0.35",
         "rollup-plugin-babel": "2",
         "rollup-plugin-json": "2",
         "tape": "4",
