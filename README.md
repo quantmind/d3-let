@@ -9,3 +9,4 @@ Utilities for every day use. No dependencies, import what you need, if you need 
 
 If you use [NPM](https://www.npmjs.com/package/d3-let), ``npm install d3-let``. Otherwise, download the latest release.
 AMD, CommonJS, and vanilla environments are supported. In vanilla, a ``d3`` global is exported.
+Try [d3-let](https://runkit.com/npm/d3-let) in your browser.

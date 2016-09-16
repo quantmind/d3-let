@@ -22,7 +22,6 @@
         "babel-tape-runner": "2",
         "browserify": "13",
         "covert": "1.1",
-        "crossfilter": "1",
         "eslint": "3.5",
         "faucet": "0.0",
         "package-preamble": "0.0",
