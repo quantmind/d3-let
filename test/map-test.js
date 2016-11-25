@@ -29,5 +29,16 @@ test("Test orderedMap", (t) => {
     t.equal(map.size(), 0);
     t.deepEqual(map.keys(), []);
     t.deepEqual(map.values(), []);
+
+
+    map = d3.orderedMap([bla, foo], (f) => {return f.name;});
+    t.equal(map.size(), 2);
+    t.deepEqual(map.keys(), ['bla', 'foo']);
+    t.deepEqual(map.values(), [bla, foo]);
+
     t.end();
 });
+
+
+function bla () {}
+function foo () {}

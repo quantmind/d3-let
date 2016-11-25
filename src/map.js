@@ -72,12 +72,11 @@ function map(object, f) {
 
   // Index array by numeric index or specified key function.
   else if (Array.isArray(object)) {
-    var i = -1,
-        n = object.length,
-        o;
-
-    if (f == null) while (++i < n) map.set(i, object[i]);
-    else while (++i < n) map.set(f(o = object[i], i, object), o);
+      var i = -1,
+          n = object.length,
+          o;
+      if (f == null) while (++i < n) map.set(i, object[i]);
+      else while (++i < n) map.set(f(o = object[i], i, object), o);
   }
 
   // Convert object to map.

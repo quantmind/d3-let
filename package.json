@@ -13,7 +13,7 @@
         "type": "git",
         "url": "https://github.com/quantmind/d3-let.git"
     },
-    "main": "dist/d3-let.js",
+    "main": "build/d3-let.min.js",
     "module": "index",
     "jsnext:main": "index",
     "devDependencies": {
@@ -22,22 +22,22 @@
         "babel-tape-runner": "2",
         "browserify": "13",
         "covert": "1.1",
-        "eslint": "3.5",
+        "eslint": "3.10",
         "faucet": "0.0",
         "package-preamble": "0.0",
-        "rollup": "0.35",
+        "publish": "0.6",
+        "rollup": "0.36",
         "rollup-plugin-babel": "2",
         "rollup-plugin-json": "2",
         "tape": "4",
         "uglify-js": "2.7"
     },
     "scripts": {
-        "pretest": "rm -rf dist && mkdir dist && rollup -c --banner \"$(preamble)\"",
-        "test": "eslint index.js src test && babel-tape-runner `find test -name '*-test.js'` | faucet",
-        "prepublish": "npm run test && uglifyjs --preamble \"$(preamble)\" dist/d3-let.js -c -m -o dist/d3-let.min.js && rm -f dist/d3-let.zip",
-        "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git tag -am \"Release $VERSION.\" v${VERSION} && git push --tags && zip -j dist/d3-let.zip -- LICENSE README.md dist/d3-let.js dist/d3-let.min.js"
-    },
-    "babel": {
-        "presets": ["es2015"]
+        "test": "eslint index.js rollup.config.js src test && babel-tape-runner `find test -name '*-test.js'` | faucet",
+        "rollup": "rollup -c --banner \"$(preamble)\"",
+        "minify": "uglifyjs --preamble \"$(preamble)\" build/d3-let.js -c -m -o build/d3-let.min.js",
+        "prepublish": "npm run-script rollup && npm run-script minify",
+        "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git tag -am \"Release $VERSION.\" v${VERSION} && git push --tags && mkdir -p ../giottojs.org/latest && mkdir -p ../giottojs.org/d3-let/${VERSION} && cp build/* ../giottojs.org/d3-let/${VERSION}/ && cp build/* ../giottojs.org/latest/ && cd ../giottojs.org && git add d3-let/${VERSION} latest && git commit -a -m \"d3-let ${VERSION}\" && git push",
+        "release": "publish"
     }
 }

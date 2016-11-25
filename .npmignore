@@ -1,4 +1,4 @@
 .idea
 .travis.yml
-dist/*.zip
+rollup.config.js
 test/
