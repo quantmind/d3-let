@@ -1,6 +1,6 @@
 {
     "name": "d3-let",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "description": "A small set of utilities for d3 plugins",
     "homepage": "https://github.com/quantmind/d3-let",
     "author": {
@@ -13,7 +13,7 @@
         "type": "git",
         "url": "https://github.com/quantmind/d3-let.git"
     },
-    "main": "build/d3-let.min.js",
+    "main": "build/d3-let.js",
     "module": "index",
     "jsnext:main": "index",
     "devDependencies": {
@@ -37,6 +37,7 @@
         "test": "eslint index.js rollup.config.js src test && babel-tape-runner `find test -name '*-test.js'` | faucet",
         "rollup": "rollup -c --banner \"$(preamble)\"",
         "minify": "uglifyjs --preamble \"$(preamble)\" build/d3-let.js -c -m -o build/d3-let.min.js",
+        "build": "npm run-script rollup && npm run-script minify",
         "prepublish": "npm run-script rollup && npm run-script minify",
         "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git tag -am \"Release $VERSION.\" v${VERSION} && git push --tags && mkdir -p ../giottojs.org/latest && mkdir -p ../giottojs.org/d3-let/${VERSION} && cp build/* ../giottojs.org/d3-let/${VERSION}/ && cp build/* ../giottojs.org/latest/ && cd ../giottojs.org && git add d3-let/${VERSION} latest && git commit -a -m \"d3-let ${VERSION}\" && git push",
         "release": "publish"
