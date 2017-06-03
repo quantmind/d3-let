@@ -32,22 +32,6 @@ test('test isPromise', (t) => {
     t.end();
 });
 
-test('test assign', (t) => {
-    t.notEqual(d3.assign({}, undefined), {});
-    t.deepEqual(d3.assign({}, undefined), {});
-    t.deepEqual(d3.assign({}, {bla:'foo'}, undefined), {bla: 'foo'});
-    t.end();
-});
-
-
-test('test self', (t) => {
-    var o = {}, inner = {};
-    t.equal(d3.self.get(o), undefined);
-    d3.self.set(o, inner);
-    t.equal(d3.self.get(o), inner);
-    t.end();
-});
-
 
 test('test pop', (t) => {
     t.equal(d3.pop(), undefined);
