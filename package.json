@@ -1,6 +1,6 @@
 {
     "name": "d3-let",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "A small set of utilities for d3 plugins",
     "homepage": "https://github.com/quantmind/d3-let",
     "author": {
@@ -21,17 +21,15 @@
     "module": "index",
     "jsnext:main": "index",
     "devDependencies": {
-        "babel-preset-es2015": "6.24",
-        "babel-preset-es2015-rollup": "3.0",
+        "babel-preset-env": "1.6",
         "babel-tape-runner": "2",
-        "babelify": "7",
-        "browserify": "14.4",
+        "babelify": "8",
         "covert": "1.1",
-        "eslint": "4.8",
+        "eslint": "4.10",
         "faucet": "0.0",
         "package-preamble": "0.1",
         "publish": "0.6",
-        "rollup": "0.5",
+        "rollup": "0.50",
         "rollup-plugin-babel": "3.0",
         "rollup-plugin-json": "2",
         "tape": "4",
@@ -48,7 +46,7 @@
     },
     "babel": {
         "presets": [
-            "es2015"
+            "env"
         ]
     }
 }
