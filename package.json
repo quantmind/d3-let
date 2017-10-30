@@ -21,7 +21,10 @@
     "module": "index",
     "jsnext:main": "index",
     "devDependencies": {
+        "babel-core": "6.26",
+        "babel-plugin-external-helpers": "6.22",
         "babel-preset-env": "1.6",
+        "babel-preset-es2015-rollup": "3.0",
         "babel-tape-runner": "2",
         "babelify": "8",
         "covert": "1.1",

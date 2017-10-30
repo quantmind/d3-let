@@ -12,7 +12,10 @@ export default {
     plugins: [
         json(),
         babel({
-            babelrc: false
+            babelrc: false,
+            plugins: ['external-helpers'],
+            presets: ['es2015-rollup'],
+            externalHelpers: true
         })
     ]
 };
