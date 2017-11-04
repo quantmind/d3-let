@@ -1,3 +1,4 @@
+export {default as assign} from 'object-assign';
 export {inBrowser} from './src/consts';
 export {logger} from './src/logger';
 export {default as pop} from './src/pop';

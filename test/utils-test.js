@@ -51,3 +51,9 @@ test('test pop', (t) => {
     t.equal(o.length, 1);
     t.end();
 });
+
+test('test assign', t => {
+    var o = d3.assign({}, {a: 4});
+    t.equal(o.a, 4);
+    t.end();
+});

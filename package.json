@@ -1,6 +1,6 @@
 {
     "name": "d3-let",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "description": "A small set of utilities for d3 plugins",
     "homepage": "https://github.com/quantmind/d3-let",
     "author": {
@@ -34,7 +34,9 @@
         "publish": "0.6",
         "rollup": "0.50",
         "rollup-plugin-babel": "3.0",
+        "rollup-plugin-commonjs": "8.2",
         "rollup-plugin-json": "2",
+        "rollup-plugin-node-resolve": "3.0",
         "tape": "4",
         "uglify-js": "3.1"
     },
