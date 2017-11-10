@@ -30,6 +30,9 @@ export function isNumber (value) {
     return ostring.call(value) === '[object Number]';
 }
 
+export function isError (value) {
+    return ostring.call(value) === '[object Error]';
+}
 
 export function isPromise (value) {
     return ostring.call(value) === '[object Promise]';

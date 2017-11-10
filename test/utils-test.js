@@ -1,4 +1,4 @@
-import {test} from 'tape';
+import {test} from 'tape-async';
 import * as d3 from '../'
 
 
@@ -26,10 +26,29 @@ test('test isDate', (t) => {
     t.end();
 });
 
+test('test isError', (t) => {
+    t.ok(d3.isError(new Error('test')));
+    t.notOk(d3.isError({}));
+    t.notOk(d3.isDate(''));
+    t.notOk(d3.isDate([]));
+    t.end();
+});
+
 test('test isPromise', (t) => {
     t.ok(d3.isPromise(new Promise(()=>{})));
     t.notOk(d3.isPromise({}));
     t.end();
+});
+
+test('test resolved Promise', async (t) => {
+    var p = await d3.resolvedPromise('ok');
+    t.equal(p, 'ok');
+    p = d3.resolvedPromise(new Error('not ok'));
+    try {
+        await p
+    } catch (e) {
+        t.equal(''+e, 'Error: not ok');
+    }
 });
 
 

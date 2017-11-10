@@ -20,3 +20,8 @@ Try [d3-let](https://runkit.com/npm/d3-let) in your browser.
 ### inBrowser
 
 Constant indicating if the javascript is client side (in the browser) or server side (node).
+
+
+### resolvedPromise (result)
+
+Return a resolved or rejected promise. The promise is rejected if ``result`` is an Error.
