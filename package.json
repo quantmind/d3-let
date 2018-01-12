@@ -1,6 +1,6 @@
 {
     "name": "d3-let",
-    "version": "0.3.3",
+    "version": "0.4.0",
     "description": "A small set of utilities for d3 plugins",
     "homepage": "https://github.com/quantmind/d3-let",
     "author": {
@@ -22,25 +22,25 @@
     "jsnext:main": "index",
     "devDependencies": {
         "babel-core": "6.26",
-        "babel-eslint": "8.0",
+        "babel-eslint": "8.2",
         "babel-plugin-external-helpers": "6.22",
         "babel-preset-env": "1.6",
         "babel-preset-es2015-rollup": "3.0",
         "babel-tape-runner": "2",
         "babelify": "8",
         "covert": "1.1",
-        "eslint": "4.10",
+        "eslint": "4.15",
         "faucet": "0.0",
         "package-preamble": "0.1",
         "publish": "0.6",
-        "rollup": "0.51",
+        "rollup": "0.54",
         "rollup-plugin-babel": "3.0",
         "rollup-plugin-commonjs": "8.2",
         "rollup-plugin-json": "2",
         "rollup-plugin-node-resolve": "3.0",
         "tape": "4",
         "tape-async": "2.3",
-        "uglify-js": "3.1"
+        "uglify-js": "3.3"
     },
     "scripts": {
         "test": "eslint index.js rollup.config.js src test && babel-tape-runner `find test -name '*-test.js'` | faucet",

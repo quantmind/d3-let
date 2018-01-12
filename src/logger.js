@@ -1,3 +1,3 @@
 import {inBrowser} from './consts';
 
-export const logger = inBrowser ? window.console : require('console');
+export const logger = inBrowser ? window.console : console;
